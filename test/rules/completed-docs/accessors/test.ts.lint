@@ -116,3 +116,34 @@ export class OnlyHasSetAccessorWithNoComments {
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~        [Documentation must exist for properties.]
 
 }
+
+export class Parent {
+    
+    /**
+     * ...
+     */
+    myField: string;
+
+}
+
+export class InheritedSingleLine extends Parent {
+
+    /** @inheritDoc */
+    private myField: string;
+
+}
+
+export class InheritedMultiLine extends Parent {
+
+    /** 
+     * @inheritDoc
+     */
+    private myField: string;
+
+}
+
+export class InheritedImplicit extends Parent {
+
+    private myField: string;
+
+}
